@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/click.ogg-273d310651372f87d37c4d3b5b5ada6d.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/Essential Game Audiopack/Sound Effects/RandomSfx/click.ogg"
+dest_files=[ "res://.import/click.ogg-273d310651372f87d37c4d3b5b5ada6d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

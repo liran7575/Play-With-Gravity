@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Tilemaps/GrassTile.tres" type="TileSet" id=1]
+
+[node name="GrassTile" type="TileMap"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 70, 70 )
+cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
+format = 1

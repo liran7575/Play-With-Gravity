@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ove Melaa - Dark Loop.ogg-5144c85c14611ebea7a97f827dc067d4.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/Essential Game Audiopack/Loops/Ove Melaa - Dark Loop.ogg"
+dest_files=[ "res://.import/Ove Melaa - Dark Loop.ogg-5144c85c14611ebea7a97f827dc067d4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

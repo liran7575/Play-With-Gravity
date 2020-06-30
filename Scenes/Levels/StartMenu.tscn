@@ -1,0 +1,405 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/StartMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Themes/Theme.tres" type="Theme" id=2]
+[ext_resource path="res://Assets/Textures/Background/airadventurelevel2.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Objects/Fade.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Sounds/UI SFX Set/rollover2.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Sounds/UI SFX Set/switch28.wav" type="AudioStream" id=6]
+[ext_resource path="res://Scenes/Levels/Options.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Sounds/Music/awesomeness.wav" type="AudioStream" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "background_fade_in"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("../../Fade:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("../../Fade:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("../../Fade:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("../../Fade:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=2]
+length = 3.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Start:rect_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1e-05, -0.546, 0, 0.25, 0, 1.1, -0.546, 0, 0.25, 0, 1, -0.253135, -0.000235021, 0.25, 0 ),
+"times": PoolRealArray( 1, 1.5, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Start:rect_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1e-05, -0.546, 0, 0.25, 0, 1.1, -0.546, 0, 0.25, 0, 1, -0.251747, 0.000158787, 0.25, 0 ),
+"times": PoolRealArray( 1, 1.5, 2 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Quit:rect_scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1e-05, -0.546, 0, 0.25, 0, 1.05, -0.546, 0, 0.25, 0, 1, -0.546, 0, 0.25, 0 ),
+"times": PoolRealArray( 1.3, 1.8, 2.3 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Quit:rect_scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1e-05, -0.546, 0, 0.25, 0, 1.05, -0.546, 0, 0.25, 0, 1, -0.546, 0, 0.25, 0 ),
+"times": PoolRealArray( 1.3, 1.8, 2.3 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Name:modulate:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Name:modulate:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Name:modulate:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("Name:modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("Name:rect_scale:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 1.2, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Name:rect_scale:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 1.2, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("Name:rect_position:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("Name:rect_position:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( -50, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "button_fade_out"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Start:rect_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.253135, -0.000235021, 0.25, 0, 1.1, -0.546, 0, 0.25, 0, 1e-05, -0.546, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Start:rect_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.251747, 0.000158787, 0.25, 0, 1.1, -0.546, 0, 0.25, 0, 1e-05, -0.546, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Quit:rect_scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.546, 0, 0.25, 0, 1.05, -0.546, 0, 0.25, 0, 1e-05, -0.546, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.2, 0.7, 1.2 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Quit:rect_scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.546, 0, 0.25, 0, 1.05, -0.546, 0, 0.25, 0, 1e-05, -0.546, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.2, 0.7, 1.2 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Name:modulate:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.4, 1.2 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Name:modulate:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.4, 1.2 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Name:modulate:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.4, 1.2 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("Name:modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.4, 1.2 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("Name:rect_scale:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1.2, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.7, 1.2 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Name:rect_scale:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1.2, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.7, 1.2 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("Name:rect_position:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.7, 1.2 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("Name:rect_position:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -50, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.7, 1.2 )
+}
+
+[node name="StartMenu" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 564.0
+margin_top = 336.0
+margin_right = 1356.0
+margin_bottom = 743.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource( 2 )
+alignment = 1
+script = ExtResource( 7 )
+
+[node name="Name" type="Label" parent="CenterContainer/Options"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 792.0
+margin_bottom = 133.0
+rect_pivot_offset = Vector2( 396, 74.593 )
+theme = ExtResource( 2 )
+text = "Play With Gravity"
+align = 1
+
+[node name="Start" type="Button" parent="CenterContainer/Options"]
+margin_top = 137.0
+margin_right = 792.0
+margin_bottom = 270.0
+rect_pivot_offset = Vector2( 396, 66 )
+theme = ExtResource( 2 )
+text = "Start"
+
+[node name="Quit" type="Button" parent="CenterContainer/Options"]
+margin_top = 274.0
+margin_right = 792.0
+margin_bottom = 407.0
+rect_pivot_offset = Vector2( 396, 66 )
+theme = ExtResource( 2 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CenterContainer/Options"]
+anims/background_fade_in = SubResource( 1 )
+anims/button_fade_in = SubResource( 2 )
+anims/button_fade_out = SubResource( 3 )
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="CenterContainer/Options"]
+position = Vector2( -564, -336 )
+stream = ExtResource( 5 )
+
+[node name="Click" type="AudioStreamPlayer2D" parent="CenterContainer/Options"]
+position = Vector2( -564, -336 )
+stream = ExtResource( 6 )
+
+[node name="Menu" type="AudioStreamPlayer2D" parent="CenterContainer/Options"]
+position = Vector2( -564, -336 )
+stream = ExtResource( 8 )
+volume_db = -8.0
+autoplay = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="airadventurelevel2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 1, 1.111 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Fade" parent="." instance=ExtResource( 4 )]
+modulate = Color( 0, 0, 0, 0 )
+rect_scale = Vector2( 0.996745, 0.993693 )
+[connection signal="button_fade_out_finished" from="CenterContainer/Options" to="." method="_on_Options_button_fade_out_finished"]
+[connection signal="mouse_entered" from="CenterContainer/Options/Start" to="." method="_on_Start_mouse_entered"]
+[connection signal="pressed" from="CenterContainer/Options/Start" to="." method="_on_Start_pressed"]
+[connection signal="mouse_entered" from="CenterContainer/Options/Quit" to="." method="_on_Quit_mouse_entered"]
+[connection signal="pressed" from="CenterContainer/Options/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="animation_finished" from="CenterContainer/Options/AnimationPlayer" to="CenterContainer/Options" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="fade_in_finished" from="Fade" to="." method="_on_Fade_fade_in_finished"]
+[connection signal="fade_out_finished" from="Fade" to="." method="_on_Fade_fade_out_finished"]

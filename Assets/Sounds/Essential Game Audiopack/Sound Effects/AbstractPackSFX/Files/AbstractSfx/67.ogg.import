@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/67.ogg-a85370feb2dc3b96bb285b0f8b95bc4b.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/Essential Game Audiopack/Sound Effects/AbstractPackSFX/Files/AbstractSfx/67.ogg"
+dest_files=[ "res://.import/67.ogg-a85370feb2dc3b96bb285b0f8b95bc4b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

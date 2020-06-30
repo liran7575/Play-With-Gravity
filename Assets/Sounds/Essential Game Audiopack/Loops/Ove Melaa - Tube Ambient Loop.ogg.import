@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ove Melaa - Tube Ambient Loop.ogg-11972667c62d2ec55e3a13b39814a809.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/Essential Game Audiopack/Loops/Ove Melaa - Tube Ambient Loop.ogg"
+dest_files=[ "res://.import/Ove Melaa - Tube Ambient Loop.ogg-11972667c62d2ec55e3a13b39814a809.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

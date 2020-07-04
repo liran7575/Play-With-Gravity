@@ -1,4 +1,3 @@
 extends Node
-
 var health = 3
-var num_keys = 0
+var max_health = 4

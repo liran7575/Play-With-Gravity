@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ null ],
+"loop": true,
+"name": "Hurt",
+"speed": 5.0
+}, {
+"frames": [ null, null, null, null, null, null, null, null, null, null, null ],
+"loop": true,
+"name": "Walk",
+"speed": 20.0
+}, {
+"frames": [ null ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ null ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ null ],
+"loop": true,
+"name": "Duck",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 35.0
+height = 15.0
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 16 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "Hurt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 2 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.1, 0.1 )
+motion_mirroring = Vector2( 2400, 1350 )
+
+[node name="airadventurelevel3" type="Sprite" parent="Background/ParallaxLayer"]
+position = Vector2( 4.07251, -2.4435 )
+scale = Vector2( 1.25, 1.25 )
+offset = Vector2( 0, 75 )
+
+[node name="Camera" type="Camera2D" parent="."]
+offset = Vector2( 0, 540 )
+current = true
+limit_left = -960
+limit_top = -540
+limit_right = 2880
+limit_bottom = 540
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 10.0
+
+[node name="HealthBar" type="Node2D" parent="."]
+position = Vector2( 0, -70 )
